@@ -1,0 +1,12 @@
+.outter
+{
+  border:1px black solid;
+  box-shadow: 2px 1px 10px 1px;
+  width:18rem;
+  height:23rem;
+  /* background-color: lightblue; */
+  float:left;
+  
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
