@@ -23,7 +23,7 @@ function PDash() {
   const token = localStorage.getItem("token");
   const getUser = async () => {
     try {
-      const res = await axios.get('http://localhost:2000/user/CurrentUser',
+      const res = await axios.get('https://cityplusbackend.onrender.com/user/CurrentUser',
         {
           headers: {
             'Authorization': token
