@@ -6,7 +6,7 @@ const Cards=(objProp)=>{
 return(
     <>
  <div className={cstyle.outter}>
-    <img src={`http://localhost:2000/uploads/${objProp.img}`}  width="100%" height="180" />
+    <img src={`https://cityplusbackend.onrender.com/uploads/${objProp.img}`}  width="100%" height="180" />
       <div className="ms-2 mt-2">
         Name : {objProp.Name}
         <br />
