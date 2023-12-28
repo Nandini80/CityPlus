@@ -47,7 +47,7 @@ function ClientPostReq()
 //   axios request fire
   async function doSaveInfo() 
   {
-    var url = "http://localhost:2000/client/PostReq";
+    var url = "https://cityplusbackend.onrender.com/client/PostReq";
     var formData = new FormData();
     for (var x in obj) {
       formData.append(x, obj[x]);
