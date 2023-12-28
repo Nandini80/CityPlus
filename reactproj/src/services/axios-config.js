@@ -1,6 +1,7 @@
 import axios from "axios";
 
-let baseURL = "http://localhost:2000";
+let baseURL = "https://cityplusbackend.onrender.com";
+
 
 const publicReq  = axios.create({
     baseURL,
