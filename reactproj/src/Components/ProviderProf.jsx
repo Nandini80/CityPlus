@@ -67,7 +67,7 @@ function Profile() {
 
   //axios request fire
   async function doSaveInfo() {
-    var url = "http://localhost:2000/provider/profile";
+    var url = "https://cityplusbackend.onrender.com/provider/profile";
     var formData = new FormData();
     for (var x in obj) {
       formData.append(x, obj[x]);
@@ -77,7 +77,7 @@ function Profile() {
   };
 
   async function doUpdateInfo() {
-    var url = "http://localhost:2000/provider/doUpdate";
+    var url = "https://cityplusbackend.onrender.com/provider/doUpdate";
     var formData = new FormData();
     for (var x in obj) {
       formData.append(x, obj[x]);
@@ -87,7 +87,7 @@ function Profile() {
   }
 
   async function doFetchInfo() {
-    var url = "http://localhost:2000/provider/doFetch?email=" + obj.email;
+    var url = "https://cityplusbackend.onrender.com/provider/doFetch?email=" + obj.email;
     var resp = await axios.post(url);
     // alert(JSON.stringify(resp.data));
 
