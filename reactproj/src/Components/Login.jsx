@@ -37,7 +37,7 @@ function Login()
 
   const doSubmit=async ()=>{
     //For post
-     var url = "http://localhost:2000/user/Login"; 
+     var url = "https://cityplusbackend.onrender.com/user/Login"; 
      var resp = await axios.post(url,obj);
     //  alert(JSON.stringify(resp.data));
      if(resp.data.status===false)
