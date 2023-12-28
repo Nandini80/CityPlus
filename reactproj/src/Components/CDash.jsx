@@ -22,7 +22,7 @@ function CDash() {
   }, []);
 
   const getUser = async () => {
-    const res = await axios.get("http://localhost:2000/user/CurrentUser",
+    const res = await axios.get("https://cityplusbackend.onrender.com/user/CurrentUser",
       {
         headers: {
           'Authorization': token
