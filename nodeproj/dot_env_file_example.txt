@@ -1,0 +1,5 @@
+Create a file called ".env" and it should have this in it ->
+
+
+sec_key="mernstack"
+MONGODB_URL =  {Your Mongo Db URL HERE} 
