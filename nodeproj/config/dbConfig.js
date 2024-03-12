@@ -1,3 +1,6 @@
-module.exports={
-    dburl : "mongodb+srv://nandinijindal010:WVxhZqORuSKgnPZO@cluster0.r4o4j8h.mongodb.net/?retryWrites=true&w=majority"
+ 
+require('dotenv').config(); // Load environment variables from .env file
+
+module.exports = {
+  dburl: process.env.MONGODB_URL ,  
 };
