@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../Styling/SignupCSS.css';  
 import { signupservice } from '../services/user';
-
+import Header_Navbar from './Header_Navbar';
 function Signup() {
   const [obj, dosignup] = useState({ email: "", pass: "", desig: "" });
   const [errobj, doUpdateErr] = useState({ email: "", pass: "", desig: "" })
@@ -58,6 +58,10 @@ function Signup() {
      }
 
   return (
+    <>
+    <Header_Navbar>
+
+    </Header_Navbar>
     <div className="signup-container mt-4">
       <form method="post">
         <center>
@@ -84,7 +88,7 @@ function Signup() {
           <button value="Submit" onClick={doSign}>Sign Up</button>
         </center>
       </form>
-    </div>
+    </div></>
   );
 }
 

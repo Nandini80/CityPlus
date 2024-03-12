@@ -1,7 +1,9 @@
-import React from 'react'
+import Header_Navbar from "./Header_Navbar";
 
 function Terms() {
     return (
+        <>
+        <Header_Navbar></Header_Navbar>
         <div>
             <h1 class="offset-md-4 mt-2">Terms and Conditions</h1>
             <p class="fs-4 ms-2 mt-2">
@@ -36,6 +38,7 @@ function Terms() {
                 Email: rishavjindal02@gmail.com
             </p>
         </div>
+        </>
     )
 }
 
