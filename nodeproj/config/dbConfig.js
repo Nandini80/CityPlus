@@ -1,3 +1,3 @@
 module.exports={
-    dburl : "mongodb+srv://nandinijindal010:WVxhZqORuSKgnPZO@cluster0.r4o4j8h.mongodb.net/?retryWrites=true&w=majority"
-};
+    dburl : "mongodb+srv://nandinijindal:user123@cluster0.arfrynd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+}
