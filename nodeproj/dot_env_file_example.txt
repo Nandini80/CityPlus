@@ -3,3 +3,4 @@ Create a file called ".env" and it should have this in it ->
 
 sec_key="mernstack"
 MONGODB_URL =  {Your Mongo Db URL HERE} 
+(Currently for contribution the mongodb url is -> mongodb+srv://nandinijindal:user123@cluster0.arfrynd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 )
