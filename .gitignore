@@ -1,2 +1,4 @@
 
 nodeproj/.env
+node_modules/zxcvbn/src/matching.coffee
+/node_modules

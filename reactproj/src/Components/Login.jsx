@@ -16,22 +16,34 @@ function Login()
 
   const doCheck = (event) => {
     var { name, value } = event.target;
-    if (name === "email" && value == "") {
+    if (name === "email" && value.trim() == "") {
       doUpdateErr({ ...errobj, ["email"]: "Please Enter your Email " });
       return;
     }
 
-    if (name === "pass" && value == "") {
+    if (name === "pass" && value.trim() == "") {
       doUpdateErr({ ...errobj, ["pass"]: "Please Enter your Password" });
       return;
     }
 
-    if (name === "pass" && value != "") {
-      doUpdateErr({ ...errobj, ["pass"]: "Correct" });
+    if (name === "email" && value.trim() !== "") {
+      // Email format validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(value)) {
+        doUpdateErr({ ...errobj, ["email"]: "Invalid email format" });
+      } else {
+        doUpdateErr({ ...errobj, ["email"]: "Correct" });
+      }
     }
- 
-    if (name === "email" && value != "") {
-      doUpdateErr({ ...errobj, ["email"]: "Correct" });
+    if (name === "pass" && value.trim() !== "") { 
+      const zxcvbn = require('zxcvbn');
+      const passwordStrength = zxcvbn(value);
+      if (passwordStrength.score < 3) {
+        doUpdateErr({ ...errobj, ["pass"]: "Weak password. Please use a stronger one." });
+      } else {
+        doUpdateErr({ ...errobj, ["pass"]: "Correct" });
+      }
+      
     }
   }
 
