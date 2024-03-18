@@ -3,6 +3,7 @@ import publicReq, { privateReq } from "./axios-config";
 
 const signupservice =(data)=>
 {
+    console.log("inside sinupservice")
     return publicReq.post("/user/Signup",data);
 }; 
 

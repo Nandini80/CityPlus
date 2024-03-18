@@ -1,15 +1,8 @@
 import axios from "axios";
 
-let baseURL = "https://cityplusbackend.onrender.com";
+const publicReq  = axios.create();
 
-
-const publicReq  = axios.create({
-    baseURL,
-});
-
-const privateReq = axios.create({
-    baseURL,
-});
+const privateReq = axios.create();
 
 // const imageUpload = axios.create({
 //     baseURL,

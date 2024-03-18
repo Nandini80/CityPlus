@@ -1,38 +1,53 @@
-var express = require("express");
-var mongoose = require("mongoose");
-var cors = require("cors");
-var userrouter = require("./routers/user.router");
-var clientrouter = require("./routers/client.router");
-var providerrouter = require("./routers/provider.router");
-var bp = require("body-parser");
+const express = require("express");
+const path = require("path");
+const dotenv = require("dotenv");
+const bp = require("body-parser");
+const fileupload = require("express-fileupload");
+const {connectDB}=require("./config/dbConfig")
 
-var app = express();
-var env = require("dotenv");
-app.use("/uploads",express.static('uploads'));
-var fileupload = require("express-fileupload");
+const app = express();
+const PORT =  2000;
+
+dotenv.config();
+
+// Serve static files
+app.use("/uploads", express.static('uploads'));
+app.use(express.static(path.join(__dirname, "..", "reactproj", "build")));
+
+// Middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(fileupload());
 
-env.config();
 
-app.use(cors());
-app.use(bp.urlencoded({extended:true}));
-app.listen(2000,()=>{
-    console.log("          SERVER STARTED            ");
+
+// Routes
+const userrouter = require("./routers/user.router");
+const clientrouter = require("./routers/client.router");
+const providerrouter = require("./routers/provider.router");
+
+app.use("/user", userrouter);
+app.use("/client", clientrouter);
+app.use("/provider", providerrouter);
+
+// Serve React app
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "..", "reactproj", "build", "index.html"));
 });
 
-var config = require("./config/dbConfig");
-const dburl = config.dburl;
 
-var dbCon = mongoose.connect(dburl).then(() => {
-    console.log("***********Connected*************");
-}).catch((err) => {
-    console.log("****" + err.toString());
-    process.exit();
-});
+// Start server
 
+const Start=async()=>{
+    try{
+        await connectDB(process.env.MONGODB_URL) ;
+        app.listen(PORT, () => {
+            console.log(`Server started on port ${PORT}`);
+        });
 
-app.use(express.json({extended:true})); //data will be converted into json first  
-
-app.use("/user",userrouter);
-app.use("/client",clientrouter);
-app.use("/provider",providerrouter);
+    }
+    catch(err){
+        console.error("Error occured!! :"+err)
+    }
+}
+Start();

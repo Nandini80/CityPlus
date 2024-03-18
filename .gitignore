@@ -1,4 +1,8 @@
+# Ignore sensitive environment files
+.env
 
-nodeproj/.env
-node_modules/zxcvbn/src/matching.coffee
-/node_modules
+# Ignore external libraries and dependencies
+node_modules/
+
+# Ignore built production files
+build/

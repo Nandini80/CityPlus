@@ -1,6 +1,9 @@
- 
-require('dotenv').config(); // Load environment variables from .env file
+const mongoose = require("mongoose");
 
-module.exports = {
-  dburl: process.env.MONGODB_URL ,  
-};
+module.exports.connectDB=async(url)=>{
+  return mongoose.connect(url)
+}
+
+
+
+
