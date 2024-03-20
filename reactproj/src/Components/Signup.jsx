@@ -23,7 +23,6 @@ function Signup() {
       const passwordStrength = zxcvbn(value);
       errorMessage = passwordStrength.score < 3 ? "Weak password. Please use a stronger one." : "Correct";
     }
-
     doUpdateErr({ ...errobj, [name]: errorMessage });
   };
 
