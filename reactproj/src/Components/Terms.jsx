@@ -1,4 +1,5 @@
 import Header_Navbar from "./Header_Navbar";
+import Footer from "./Footer";
 
 function Terms() {
     return (
@@ -38,6 +39,7 @@ function Terms() {
                 Email: rishavjindal02@gmail.com
             </p>
         </div>
+        <Footer/>
         </>
     )
 }
