@@ -7,7 +7,7 @@ const signupservice = (data) => {
 };
 
 const getUserService = () => {
-  return privateReq.get("/user/CurrentUser");
+  return privateReq.get("http://localhost:2000/user/CurrentUser");
 };
 
 const DistinctCatService = () => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const publicReq  = axios.create();
+const publicReq = axios.create();
 
 const privateReq = axios.create();
 
@@ -8,17 +8,21 @@ const privateReq = axios.create();
 //     baseURL,
 // });
 
-//imageUpload.defaults.headers.common["Content-type"] = "multipart/form-data"; 
+//imageUpload.defaults.headers.common["Content-type"] = "multipart/form-data";
 
 //interceptors are like middleware
-privateReq.interceptors.request.use((config)=>{
-    const token  = localStorage.getItem("token");
-    if(token)
-    {
-        config.headers.Authorization = `Bearer ${token}`;
+privateReq.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers["Authorization"] = `${token}`;
     }
     return config;
-});
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
-export {privateReq};
+export { privateReq };
 export default publicReq;
