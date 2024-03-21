@@ -1,38 +1,80 @@
-## CityPlus
-A platform designed to streamline the process of connecting individuals with household or other job-related needs to qualified workers. 
-This website not only facilitates the search for workers across various household jobs and other occupations but also empowers job seekers to explore opportunities based on their preferred cities.<br> <br> 
-Users can easily find and contact skilled workers for their specific requirements, while job seekers can efficiently navigate job listings tailored to their desired locations. <br><br>
-This platform aims to create a seamless and mutually beneficial connection between those seeking services and those offering their skills, fostering a dynamic and efficient job marketplace.<br><br>
+<h1 align="center">CityPlus</h1>
 
-## Getting Started
+Welcome to CityPlus, your ultimate destination for seamless job connections and service provision. Our platform offers an intuitive interface, seamless registration, personalized preferences, and real-time updates to simplify your job search or service-seeking journey.
 
-### Prerequisites
+## About CityPlus
+CityPlus is a comprehensive platform catering to diverse needs effectively. Whether you're seeking professional assistance or aiming to showcase your skills, our platform facilitates smooth interactions. Clients can easily connect with service providers, explore available services, and initiate contact. Service providers have the opportunity to register and discover tailored job opportunities aligned with their expertise.
 
-To run this project, you need to have Node.js and npm installed on your machine.
-
-### Installation
-
-#### Frontend Only
-
-1. Navigate to the `reactproj` directory.
-2. Install dependencies:  `npm install`
-3. Start the development server: `npm start`
-
-### Frontend development(Involving changes regarding frontend) can also be done using  Full Stack commands way by running backend with frontend but every time frontend code changes we have to build again using `npm run build` which is time consuming.
-
-#### Full Stack (Backend + Frontend)
-
-1. Navigate to the `reactproj` directory.
-2. Install frontend dependencies:`npm install`
-3. Build the frontend: `npm run build`
-4. Navigate back to the root directory:
-5. Navigate to the `nodeproj` directory:
-6. Install backend dependencies: `npm install`
-7. Start the backend server: `npm start`
+## Key Features:
+- **User-Friendly Interface:** Navigate easily to find relevant job listings.
+- **Seamless Registration:** Quick and hassle-free account creation process.
+- **Customizable Preferences:** Specify job preferences for personalized recommendations.
+- **Timely Updates:** Stay informed with real-time updates on relevant job listings.
+- **Admin Controls:** Ensure platform relevance with efficient monitoring and removal of outdated client requests.
 
 
-<i>Frontend pictures: </i><br>
-<img width="945" alt="image" src="https://github.com/Nandini80/CityPlus/assets/121488571/2d6f568f-b1af-45a1-98fa-473245212e4c">
-<img width="926" alt="image" src="https://github.com/Nandini80/CityPlus/assets/121488571/80e78955-d044-4cdc-8dbe-fdcaeefa4a9f">
-<img width="874" alt="image" src="https://github.com/Nandini80/CityPlus/assets/121488571/8a83ea07-88bd-48b8-afc3-9e40becb3489">
-<img width="857" alt="image" src="https://github.com/Nandini80/CityPlus/assets/121488571/93b65568-ad82-4e98-9827-56e2079008cd">
+## Technologies Used:
+- **Frontend :**
+  - React.js, React Router DOM
+  - Bootstrap, Material-UI
+  - Axios, JSON Web Token (JWT)
+- **Backend :**
+  - Express.js
+  - JSON Web Token (JWT), Mongoose
+
+## Project Setup
+
+1. **Clone the repository:**
+    ```bash
+    git clone <repository_url>
+    ```
+
+2. **Navigate to the cloned directory:**
+    ```bash
+    cd CityPlus
+    ```
+
+3. **Navigate to the frontend directory:**
+    ```bash
+    cd reactproj
+    ```
+
+4. **Install frontend dependencies:**
+    ```bash
+    npm install
+    ```
+
+5. **Build the frontend:**
+    ```bash
+    npm run build
+    ```
+
+6. **Navigate back to the root directory:**
+    ```bash
+    cd ..
+    ```
+
+7. **Navigate to the backend directory:**
+    ```bash
+    cd nodeproj
+    ```
+
+8. **Install backend dependencies:**
+    ```bash
+    npm install
+    ```
+
+9. **Start the backend server:**
+    ```bash
+    npm start
+    ```
+
+## Contribution
+
+We actively encourage contributions from the community to help improve CityPlus and expand its impact. If you're interested in contributing, here's how you can get started:
+
+- **Fork the Repository**: Fork our repository on GitHub to create your copy.
+- **Make Changes**: Make improvements, add new features, or fix bugs in your forked repository.
+- **Submit a Pull Request**: Once you're ready, submit a pull request to have your changes reviewed and considered for merging into the main project.
+
+### Together, we can continue to innovate and improve CityPlus, ensuring that it remains a valuable resource for both service providers and those seeking assistance. Let's work together to make a positive impact worldwide.
