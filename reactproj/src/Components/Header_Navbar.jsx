@@ -1,23 +1,37 @@
-import Nav from 'react-bootstrap/Nav';
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import Image from 'react-bootstrap/Image';
 
-export default function Header_Navbar() {
+export default function CityPlusNavbar() {
+  const CustomNavLink = ({ href, children }) => {
     return (
-      <Navbar expand="lg">
-      <Image src="pics/logo.jpeg" width={45} className='me-2 ms-4' height={45} rounded />
-      <Navbar.Brand href="#home">
-        <b>CityPlus</b> </Navbar.Brand>
+      <Nav.Link href={href} className="mx-2 text-white custom-nav-link">
+        {children}
+      </Nav.Link>
+    );
+  }
+
+  return (
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand href="#">
+        <Image src="pics/logo.jpeg" width={45} height={45} className="me-2 ms-4" alt="Logo" rounded />
+        <b>CityPlus</b>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">
-          <Nav.Link href="/#home" className='ms-3'>Home</Nav.Link>
-          <Nav.Link href="/#footer" className='ms-3'>Info</Nav.Link>
-          <Nav.Link href="/terms" className='ms-3'>Terms and Conditions</Nav.Link>
-          <Nav.Link className='ms-3' href="/Signup">SignUp</Nav.Link>
-          <Nav.Link className='ms-3' href="/login">Login</Nav.Link>
+        <Nav className="ml-auto">
+          <CustomNavLink href="/#home">Home</CustomNavLink>
+          <CustomNavLink href="/#footer">Info</CustomNavLink>
+          <CustomNavLink href="/terms">Terms and Conditions</CustomNavLink>
+          <CustomNavLink href="/signup">SignUp</CustomNavLink>
+          <CustomNavLink href="/login">Login</CustomNavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    )
+  );
 }
+
+
+
+
