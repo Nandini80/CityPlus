@@ -3,23 +3,29 @@ const path = require("path");
 const dotenv = require("dotenv");
 const bp = require("body-parser");
 const fileupload = require("express-fileupload");
-const {connectDB}=require("./config/dbConfig")
+const { connectDB } = require("./config/dbConfig");
+const cors = require("cors");
 
 const app = express();
-const PORT =  2000;
+const PORT = 2000;
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 
 dotenv.config();
 
 // Serve static files
-app.use("/uploads", express.static('uploads'));
+app.use("/uploads", express.static("uploads"));
 app.use(express.static(path.join(__dirname, "..", "reactproj", "build")));
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(fileupload());
-
-
 
 // Routes
 const userrouter = require("./routers/user.router");
@@ -32,22 +38,21 @@ app.use("/provider", providerrouter);
 
 // Serve React app
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "..", "reactproj", "build", "index.html"));
+  res.sendFile(
+    path.resolve(__dirname, "..", "reactproj", "build", "index.html")
+  );
 });
-
 
 // Start server
 
-const Start=async()=>{
-    try{
-        await connectDB(process.env.MONGODB_URL) ;
-        app.listen(PORT, () => {
-            console.log(`Server started on port ${PORT}`);
-        });
-
-    }
-    catch(err){
-        console.error("Error occured!! :"+err)
-    }
-}
+const Start = async () => {
+  try {
+    await connectDB(process.env.MONGODB_URL);
+    app.listen(PORT, () => {
+      console.log(`Server started on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error("Error occured!! :" + err);
+  }
+};
 Start();

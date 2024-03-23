@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
-import Header_Navbar from './Header_Navbar';
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Header_Navbar from "./Header_Navbar";
 
 function Login() {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ function Login() {
   const doCheck = (event) => {
     const { name, value } = event.target;
     let errorMessage = "";
-    
+
     if (name === "email") {
       // Email format validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -19,7 +19,7 @@ function Login() {
       } else if (!emailRegex.test(value)) {
         errorMessage = "Invalid email format";
       }
-    } 
+    }
 
     doUpdateErr({ ...errobj, [name]: errorMessage });
   };
@@ -27,7 +27,7 @@ function Login() {
   const handle_Login_Submit = async (e) => {
     e.preventDefault();
     const formdata = new FormData(e.target);
-    const url = "/user/Login";
+    const url = "http://localhost:2000/user/Login";
     try {
       const resp = await axios.post(url, formdata);
       if (resp.data.status === false) {
@@ -60,7 +60,9 @@ function Login() {
               <input type="password" name="pass" onChange={doCheck} required />
               <p>{errobj.pass}</p>
             </div>
-            <button value="button" form="login-form">Login</button>
+            <button value="button" form="login-form">
+              Login
+            </button>
           </center>
         </form>
       </div>
