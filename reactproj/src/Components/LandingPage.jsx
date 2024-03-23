@@ -297,7 +297,7 @@ function UpperPart() {
 
       <div style={{width:'100%',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',marginTop:'2rem',marginBottom:'2rem'}}>
         <center style={{ fontFamily: "os_semi_bold", marginTop: '2rem', marginBottom: "20px" }}>
-          <h1>Reveiws</h1>
+          <h1>Reviews</h1>
         </center>
         <Card style={tablet_index_styles.reviewCards}>
           <Card.Body>
