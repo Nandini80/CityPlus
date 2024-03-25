@@ -20,17 +20,6 @@ export default function Footer() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <img
-            alt="Logo"
-            style={{
-              height: "60px",
-              width: "60px",
-              overflow: "hidden",
-              objectFit: "cover",
-            }}
-            src="pics/logo.jpeg"
-          />
-
           <p style={{ fontSize: "20px", fontWeight: "500", color: "#777" }}>
             Connecting you with trusted professionals for all your needs.
           </p>
@@ -78,11 +67,11 @@ export default function Footer() {
         >
           <span>© City Plus</span>
           <span>|</span>
-          <a style={{ textDecoration: "underline", color: "#333" }} href="#">
+          <a
+            style={{ textDecoration: "underline", color: "#333" }}
+            href="/terms"
+          >
             Privacy Policy
-          </a>
-          <a style={{ textDecoration: "underline", color: "#333" }} href="#">
-            Terms of Service
           </a>
         </div>
       </div>
