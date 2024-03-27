@@ -13,6 +13,8 @@ import FindserviceProvider from './Components/FindserviceProvider';
 import { getUserService } from './services/user';
 import Terms from './Components/Terms';
 import FindClient from './Components/FindClient';
+import Footer from './Components/Footer';
+
 
 // Do routing here
 function App()
@@ -74,5 +76,6 @@ function App()
         </div>
     )
 }
+
 
 export default App;
