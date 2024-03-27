@@ -432,7 +432,7 @@ function UpperPart() {
               marginBottom: "20px",
             }}
           >
-            <h1>Reveiws</h1>
+            <h1>Reviews</h1>
           </center>
           <Card style={tablet_index_styles.reviewCards}>
             <Card.Body>
