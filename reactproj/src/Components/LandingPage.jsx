@@ -487,14 +487,6 @@ function UpperPart() {
           </Card>
         </div>
       </Tablet>
-      <Row
-        className="w-100 mt-5 mb-4 bg-body-tertiary"
-        style={{ height: "10rem" }}
-      >
-        <div className="w-100 ms-2 mt-5" style={{ height: "8rem" }}>
-          <Footer />
-        </div>
-      </Row>
     </>
   );
 }
