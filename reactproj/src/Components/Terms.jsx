@@ -1,4 +1,4 @@
-
+import "../Styling/Terms.css";
 
 function Terms() {
     return (

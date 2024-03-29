@@ -1,0 +1,61 @@
+/* Style for the terms page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: radial-gradient( rgb(49, 49, 4), rgb(9, 57, 9), rgb(9, 9, 52), rgb(41, 4, 41), rgb(59, 7, 7));
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-left: 25%;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .fs-4 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+  }
+  
+  .fs-5 {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+  }
+  
+  .ms-2 {
+    margin-left: 20px;
+  }
+  
+  /* Additional styles */
+  span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  /* Links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact info */
+  .contact-info {
+    margin-top: 20px;
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  
