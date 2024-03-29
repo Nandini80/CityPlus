@@ -13,6 +13,9 @@ import FindserviceProvider from './Components/FindserviceProvider';
 import { getUserService } from './services/user';
 import Terms from './Components/Terms';
 import FindClient from './Components/FindClient';
+import Footer from './Components/Footer';
+import WifiLoader from './Components/Loader';
+
 
 // Do routing here
 function App()
@@ -35,6 +38,15 @@ function App()
         }
     };
     */
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+      setLoading (true);
+      setTimeout(() => {
+        setLoading(false);
+      },2000)
+  
+    }, []);
+  
 
     useEffect(() => {
         if (token) {
@@ -55,7 +67,12 @@ function App()
 
     return (
         <div>
-
+            {
+        loading ? 
+        <div style={{minHeight:"100vh", width: "100%", display:"flex",justifyContent:"center",alignItems:"center"}}>
+          <WifiLoader color="#36d7b7" loading={loading} />
+        </div>
+          :
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<UpperPart />}></Route>
@@ -70,9 +87,12 @@ function App()
                     <Route path='/FindClient' element={<FindClient></FindClient>}></Route>
                     <Route path='/terms' element={<Terms></Terms>}></Route>
                 </Routes>
+                <Footer/>
             </BrowserRouter>
+}
         </div>
     )
 }
+
 
 export default App;

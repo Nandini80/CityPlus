@@ -1,9 +1,8 @@
-import Header_Navbar from "./Header_Navbar";
+import "../Styling/Terms.css";
 
 function Terms() {
     return (
         <>
-        <Header_Navbar></Header_Navbar>
         <div>
             <h1 class="offset-md-4 mt-2">Terms and Conditions</h1>
             <p class="fs-4 ms-2 mt-2">
@@ -33,7 +32,7 @@ function Terms() {
                 <br /><br />
             </p>
             <br />
-            <p class="ms-2">If you have any grievance with respect to the Platform or the Service, you can contact our grievance officer at: <br />
+            <p class="fs-4 ms-2">If you have any grievance with respect to the Platform or the Service, you can contact our grievance officer at: <br />
                 Name: Rishav Jindal <br />
                 Email: rishavjindal02@gmail.com
             </p>
