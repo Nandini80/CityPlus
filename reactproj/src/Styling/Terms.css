@@ -1,33 +1,38 @@
 /* Style for the terms page */
 body {
     font-family: Arial, sans-serif;
-    background-image: radial-gradient( rgb(49, 49, 4), rgb(9, 57, 9), rgb(9, 9, 52), rgb(41, 4, 41), rgb(59, 7, 7));
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
   }
   
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   h1 {
     margin-left: 25%;
     margin-top: 20px;
-    color: white;
+    color: black;
   }
   
   .fs-4 {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: white;
+    color: black;
   }
   
   .fs-5 {
     font-size: 1rem;
     line-height: 1.6;
-    color: white;
+    color: black;
+  }
+  .fs-2{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: black;
   }
   
   .ms-2 {
@@ -36,15 +41,15 @@ body {
   
   /* Additional styles */
   span {
-    font-weight: bold;
     font-size: 1.2rem;
-    color: white;
+    color: grey;
   }
   
   /* Links */
   a {
     color: #007bff;
     text-decoration: none;
+    font-size: 1.2rem;
   }
   
   a:hover {
@@ -54,7 +59,7 @@ body {
   /* Contact info */
   .contact-info {
     margin-top: 20px;
-    color: whitesmoke;
+    color: black;
     text-align: center;
   }
   

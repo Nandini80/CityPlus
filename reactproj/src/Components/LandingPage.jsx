@@ -159,6 +159,7 @@ function UpperPart() {
                   fontFamily: "monospace",
                   marginTop: "15px",
                   marginLeft: "20px",
+                  color : "black",
                 }}
               >
                 We offer a diverse array of services designed to meet your
@@ -241,7 +242,7 @@ function UpperPart() {
             marginBottom: "20px",
           }}
         >
-          <h1>Reveiws</h1>
+          <h1>Reviews</h1>
         </center>
         <div
           style={{

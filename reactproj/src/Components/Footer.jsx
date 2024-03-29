@@ -39,10 +39,6 @@ return (
                 <a style={{ fontSize: "20px", color: "#777" }} href="#">
                     <FacebookIcon style={{ width: "24px", height: "24px" }} />
                 </a>
-                <a style={{ fontSize: "20px", color: "#777" }} href="#">
-                    <TwitterIcon style={{ width: "24px", height: "24px" }} />
-                        <FacebookIcon style={{ width: "24px", height: "24px" }} />
-                    </a>
                     <a style={{ fontSize: "20px", color: "#777" }} href="#">
                         <TwitterIcon style={{ width: "24px", height: "24px" }} />
                     </a>
